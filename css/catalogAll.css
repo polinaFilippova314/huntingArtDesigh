@@ -1,0 +1,117 @@
+
+@font-face {
+    font-family: 'Avenir-Heavy';
+    font-display: block;
+    src: url(..//fonts/avenirHeavy/AvenirNextCyr-Heavy.woff) format("woff"),
+    url(..//fonts/avenirHeavy/AvenirNextCyr-Heavy.woff2) format("woff2"),
+    url(..//fonts/avenirHeavy/AvenirNextCyr-Heavy.ttf) format("truetype"),
+    url(..//fonts/avenirHeavy/AvenirNextCyr-Heavy.otf) format("opentype");
+}
+body{
+    background-color: #f5f5f5;
+}
+.catalog-list{
+    width: 100%;
+    padding: 0 15px;
+}
+.catalog_letter{
+    margin: 20px 0;
+    font-family: Avenir-Heavy, sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1;
+    color: #383f2d;
+}
+.catalog-list-item{
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.04);
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    transition: all .3s ease-out;
+}
+.catalog-list-pic{
+    width: 102px;
+    height: 74px;
+    align-items: center;
+    justify-content: center;
+}
+.catalog-list_img,
+.catalog-list_img img{
+    width: 90px;
+    height: 67px;
+    object-fit: contain;
+    object-position: center;
+}
+.catalog-list-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: auto;
+    height: 74px;
+    padding-left: 25px;
+}
+.catalog_list_h{
+    margin-bottom: 7px;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1;
+    color: #000000;
+}
+.catalog-list_p{
+    font-size: 13px;
+    line-height: 1.38;
+    color: #9b9b9b;
+}
+
+
+/* media */
+
+@media screen and (min-width: 550px) {
+    .catalog-list{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .catalog_letter{
+        width: 100%;
+    }
+    .catalog-list-item{
+        width: 30%;
+        flex-direction: column;
+        margin-right: 3%;
+        align-items: center;
+    }
+    .catalog-list-container{
+        padding-left: 0;
+    }
+    .catalog_list_h,
+    .catalog-list_p{
+        width: 100%;
+        text-align: center;
+    }
+}
+@media screen and (min-width: 820px) {
+    .catalog-list-item{
+        width: 23%;
+        margin-right: 2%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .catalog-list-item{
+        width: 18%;
+        margin-right: 2%;
+    }
+}
+
+
+/* hover */
+@media screen and (min-width: 835px) {
+    .catalog-list-item:hover{
+        box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.1);
+    }
+}
